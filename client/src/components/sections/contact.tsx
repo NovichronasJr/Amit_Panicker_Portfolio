@@ -25,7 +25,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    value: "amit.panicker@email.com",
+    value: "amit.panicker.dev@gmail.com",
   },
   {
     icon: Phone,
@@ -35,7 +35,7 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Location",
-    value: "San Francisco, CA",
+    value: "Kerala, India",
   },
 ];
 
