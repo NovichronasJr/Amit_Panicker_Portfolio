@@ -24,17 +24,21 @@ export default function Hero() {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section
+      id="home"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden"
+    >
       <div className="absolute inset-0 gradient-bg opacity-10"></div>
-      <div 
-        className="absolute inset-0 opacity-20" 
+      <div
+        className="absolute inset-0 opacity-20"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080')",
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       />
-      
+
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -43,23 +47,23 @@ export default function Hero() {
           className="animate-float mb-8"
         >
           <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-r from-primary to-blue-500 p-1 mb-6">
-            <img 
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300" 
-              alt="Amit Panicker" 
+            <img
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
+              alt="Amit Panicker"
               className="w-full h-full rounded-full object-cover"
             />
           </div>
         </motion.div>
-        
+
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-4xl sm:text-6xl font-bold mb-6"
         >
-          Hi, I'm <span className="text-gradient">Amit Panicker</span>
+          Hi, I'm <span style={{ color: "green" }}>Amit Panicker</span>
         </motion.h1>
-        
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -70,17 +74,18 @@ export default function Hero() {
             {typewriterText}
           </span>
         </motion.div>
-        
+
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
           className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto"
         >
-          Full-stack MERN developer and data analyst with a passion for creating 
-          innovative web applications and deriving actionable insights from complex datasets.
+          Full-stack MERN developer and data analyst with a passion for creating
+          innovative web applications and deriving actionable insights from
+          complex datasets.
         </motion.p>
-        
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -103,7 +108,7 @@ export default function Hero() {
           </Button>
         </motion.div>
       </div>
-      
+
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

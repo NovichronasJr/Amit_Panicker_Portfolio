@@ -5,23 +5,23 @@ import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 const experiences = [
   {
     id: 1,
-    title: "Senior Full-Stack Developer",
-    company: "Tech Solutions Inc.",
-    period: "2022 - Present",
-    description: "Led development of multiple MERN stack applications, implemented data analytics features, and mentored junior developers. Improved application performance by 40%.",
-    icon: Code,
-    iconBg: "bg-primary",
-    iconColor: "text-primary-foreground",
-  },
-  {
-    id: 2,
-    title: "Data Analyst",
-    company: "DataTech Analytics",
-    period: "2020 - 2022",
-    description: "Analyzed large datasets to drive business decisions, created automated reporting systems, and developed predictive models that improved forecasting accuracy by 25%.",
+    title: "Data Analyst Intern",
+    company: "Academor",
+    period: "July 2024 - August 2024",
+    description: "Worked with large datasets and developed a machine learning model to predict outcomes. Also performed data cleaning, feature extraction, and evaluation. Used Tableau to represent graphical insights from data and to plot confusion matrix.",
     icon: TrendingUp,
     iconBg: "bg-green-600",
     iconColor: "text-white",
+  },
+  {
+    id: 2,
+    title: "Web Developer Intern",
+    company: "Teachnook",
+    period: "March 2023 - April 2023",
+    description: "Developed dynamic websites using HTML, CSS and Javascript DOM manipulation concept. Integrated API's to fetch realtime data. Implemented Rest API's for real time interaction and dynamic updates.",
+    icon: Code,
+    iconBg: "bg-primary",
+    iconColor: "text-primary-foreground",
   },
 ];
 
