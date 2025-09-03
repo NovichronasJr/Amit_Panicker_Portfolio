@@ -9,8 +9,25 @@ import {
   SiJavascript, 
   SiAmazon, 
   SiDocker, 
-  SiGit 
+  SiGit,
+  SiLinux,
+  SiGnubash,
+  SiRedis,
+  SiNextdotjs,
+  SiExpress,
+  SiVite,
+  SiTailwindcss,
+  SiTableau,
+  SiC,
+  SiCplusplus,
+  SiFirebase,
+  SiOpenai,
+  SiLangchain,
+  SiHtml5,
+  SiCss3,
+  SiPostman
 } from "react-icons/si";
+import { FaJava } from "react-icons/fa";
 
 const developmentSkills = [
   { name: "React.js", percentage: 90 },
@@ -32,9 +49,26 @@ const technologies = [
   { icon: SiPython, name: "Python", color: "text-blue-600" },
   { icon: SiMongodb, name: "MongoDB", color: "text-green-700" },
   { icon: SiJavascript, name: "JavaScript", color: "text-yellow-500" },
+  { icon: SiNextdotjs, name: "Next.js", color: "text-gray-800" },
+  { icon: SiExpress, name: "Express.js", color: "text-gray-600" },
+  { icon: SiVite, name: "Vite", color: "text-purple-500" },
+  { icon: SiTailwindcss, name: "Tailwind", color: "text-cyan-500" },
+  { icon: SiHtml5, name: "HTML5", color: "text-orange-600" },
+  { icon: SiCss3, name: "CSS3", color: "text-blue-500" },
+  { icon: SiC, name: "C", color: "text-blue-700" },
+  { icon: SiCplusplus, name: "C++", color: "text-blue-600" },
+  { icon: FaJava, name: "Java", color: "text-red-600" },
+  { icon: SiFirebase, name: "Firebase", color: "text-yellow-600" },
+  { icon: SiTableau, name: "Tableau", color: "text-blue-600" },
+  { icon: SiLinux, name: "Linux", color: "text-yellow-500" },
+  { icon: SiGnubash, name: "Bash", color: "text-gray-700" },
+  { icon: SiRedis, name: "Redis", color: "text-red-600" },
   { icon: SiAmazon, name: "AWS", color: "text-orange-500" },
   { icon: SiDocker, name: "Docker", color: "text-blue-400" },
   { icon: SiGit, name: "Git", color: "text-orange-600" },
+  { icon: SiOpenai, name: "OpenAI", color: "text-green-600" },
+  { icon: SiLangchain, name: "LangChain", color: "text-purple-600" },
+  { icon: SiPostman, name: "Postman", color: "text-orange-500" },
 ];
 
 function SkillBar({ skill, index, isVisible }: { 
