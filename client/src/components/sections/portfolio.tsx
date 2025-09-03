@@ -63,7 +63,7 @@ const projects = [
     id: 6,
     title: "Port Scanner",
     description: "BASH script for automated network port scanning to identify open ports and running services on target systems for security assessment.",
-    image: "https://images.unsplash.com/photo-1518709268805-4e9042af2ac1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
     technologies: ["BASH", "Networking", "Security"],
     category: "cybersecurity",
     overlayColor: "bg-orange-600/80",
