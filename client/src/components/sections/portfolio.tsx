@@ -6,10 +6,10 @@ import { Button } from "@/components/ui/button";
 const projects = [
   {
     id: 1,
-    title: "E-Commerce Platform",
-    description: "Full-stack MERN application with payment integration, user authentication, and admin dashboard.",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    technologies: ["React", "Node.js", "MongoDB"],
+    title: "Blogging Application",
+    description: "Modern blogging platform built with Next.js featuring server-side rendering, React Query for data management, and optimized SEO performance.",
+    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    technologies: ["Next.js", "React Query", "SSR"],
     category: "development",
     overlayColor: "bg-primary/80",
     techColor: "bg-primary/10 text-primary",
@@ -17,10 +17,10 @@ const projects = [
   },
   {
     id: 2,
-    title: "Sales Analytics Dashboard",
-    description: "Comprehensive analysis of sales data with predictive modeling and interactive visualizations.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    technologies: ["Python", "Pandas", "Tableau"],
+    title: "House Price Prediction",
+    description: "Machine learning model for predicting house prices using Python libraries with comprehensive data analysis and interactive Tableau dashboard for visualization.",
+    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    technologies: ["Python", "Machine Learning", "Tableau"],
     category: "analytics",
     overlayColor: "bg-green-600/80",
     techColor: "bg-green-600/10 text-green-600",
@@ -28,14 +28,25 @@ const projects = [
   },
   {
     id: 3,
-    title: "Task Management App",
-    description: "Real-time collaboration tool with analytics dashboard and performance metrics.",
-    image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    technologies: ["MERN", "Socket.io", "Analytics"],
+    title: "AI Powered Feedback System",
+    description: "Intelligent feedback system integrating Google Gemini for agentic tasks, automatically generating and submitting feedback with user confirmation using full-stack technologies.",
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    technologies: ["Next.js", "Google Gemini", "MongoDB", "Tailwind"],
     category: "fullstack",
     overlayColor: "bg-purple-600/80",
     techColor: "bg-purple-600/10 text-purple-600",
     linkColor: "text-purple-600 hover:text-purple-600/80",
+  },
+  {
+    id: 4,
+    title: "Face Detection System",
+    description: "Advanced face detection application using OpenCV and DeepFace libraries for real-time facial recognition and analysis with high accuracy.",
+    image: "https://images.unsplash.com/photo-1555421689-491a97ff2040?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    technologies: ["OpenCV", "DeepFace", "Python"],
+    category: "computer-vision",
+    overlayColor: "bg-blue-600/80",
+    techColor: "bg-blue-600/10 text-blue-600",
+    linkColor: "text-blue-600 hover:text-blue-600/80",
   },
 ];
 
@@ -120,7 +131,7 @@ export default function Portfolio() {
           </p>
         </motion.div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <ProjectCard 
               key={project.id} 
