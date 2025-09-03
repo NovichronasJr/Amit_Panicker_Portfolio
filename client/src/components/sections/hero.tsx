@@ -26,7 +26,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-background via-background/50 to-primary/5"
+      className="min-h-screen flex items-center relative overflow-hidden bg-gradient-to-br from-background via-background/50 to-primary/5"
     >
       {/* Animated background elements */}
       <div className="absolute inset-0">
@@ -39,131 +39,210 @@ export default function Hero() {
       <motion.div
         animate={{ y: [-10, 10, -10] }}
         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-1/4 left-10 text-primary/20 hidden md:block"
+        className="absolute top-1/4 left-8 text-primary/20 hidden lg:block"
       >
         <Code size={40} />
       </motion.div>
       <motion.div
         animate={{ y: [-10, 10, -10] }}
         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-        className="absolute top-1/3 right-16 text-blue-500/20 hidden md:block"
+        className="absolute top-1/3 right-8 text-blue-500/20 hidden lg:block"
       >
         <Database size={35} />
       </motion.div>
       <motion.div
         animate={{ y: [-10, 10, -10] }}
         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-        className="absolute bottom-1/3 left-16 text-green-500/20 hidden md:block"
+        className="absolute bottom-1/3 left-8 text-green-500/20 hidden lg:block"
       >
         <Brain size={32} />
       </motion.div>
       <motion.div
         animate={{ y: [-10, 10, -10] }}
         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-        className="absolute top-16 right-1/4 text-purple-500/20 hidden md:block"
+        className="absolute top-16 right-1/3 text-purple-500/20 hidden lg:block"
       >
         <Sparkles size={28} />
       </motion.div>
 
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-        {/* Profile Image with enhanced styling */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
-          className="relative mb-8"
-        >
-          <div className="relative w-40 h-40 mx-auto">
-            {/* Animated rings */}
-            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary to-blue-500 animate-spin-slow opacity-20"></div>
-            <div className="absolute inset-2 rounded-full bg-gradient-to-r from-blue-500 to-green-500 animate-spin-reverse opacity-30"></div>
-            
-            {/* Profile image */}
-            <div className="absolute inset-4 rounded-full bg-gradient-to-r from-primary to-blue-500 p-1">
-              <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
-                alt="Amit Panicker"
-                className="w-full h-full rounded-full object-cover"
-              />
-            </div>
-            
-            {/* Glowing effect */}
-            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/20 to-blue-500/20 blur-xl animate-pulse"></div>
-          </div>
-        </motion.div>
-
-        {/* Name with modern typography */}
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-5xl sm:text-7xl font-bold mb-6 bg-gradient-to-r from-foreground via-primary to-blue-500 bg-clip-text text-transparent"
-        >
-          Hi, I'm{" "}
-          <span className="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">
-            Amit Panicker
-          </span>
-        </motion.h1>
-
-        {/* Typewriter text with enhanced styling */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-2xl sm:text-3xl mb-8 h-20 flex items-center justify-center"
-        >
-          <div className="relative">
-            <span className="typewriter bg-gradient-to-r from-primary to-blue-500 bg-clip-text text-transparent font-semibold" data-testid="typewriter-text">
-              {typewriterText}
-            </span>
-            <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 to-blue-500/20 blur-sm rounded-lg opacity-30"></div>
-          </div>
-        </motion.div>
-
-        {/* Description with modern styling */}
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-xl text-muted-foreground mb-10 max-w-3xl mx-auto leading-relaxed"
-        >
-          Full-stack MERN developer and data analyst with a passion for creating{" "}
-          <span className="text-primary font-medium">innovative web applications</span> and deriving{" "}
-          <span className="text-blue-500 font-medium">actionable insights</span> from
-          complex datasets.
-        </motion.p>
-
-        {/* Enhanced buttons */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="flex flex-col sm:flex-row gap-6 justify-center items-center"
-        >
-          <Button
-            onClick={() => scrollToSection("#portfolio")}
-            className="group relative bg-gradient-to-r from-primary to-blue-500 hover:from-primary/90 hover:to-blue-500/90 text-white px-10 py-4 font-medium text-lg rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
-            data-testid="button-view-work"
-          >
-            <span className="relative z-10">View My Work</span>
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-blue-500/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          </Button>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-screen py-20">
           
-          <Button
-            variant="outline"
-            className="group relative border-2 border-primary/30 hover:border-primary text-foreground px-10 py-4 font-medium text-lg rounded-full transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-background/50 hover:bg-primary/5"
-            data-testid="button-download-cv"
-            onClick={() => {
-              const link = document.createElement('a');
-              link.href = '/Amit_Panicker_CV.pdf';
-              link.download = 'Amit_Panicker_CV.pdf';
-              link.click();
-            }}
+          {/* Left Content */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="space-y-8 text-center lg:text-left"
           >
-            <span className="relative z-10">Download CV</span>
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-blue-500/10 blur-sm rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          </Button>
-        </motion.div>
+            {/* Greeting */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="space-y-2"
+            >
+              <p className="text-lg text-primary font-medium">Hello, I'm</p>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-foreground via-primary to-blue-500 bg-clip-text text-transparent">
+                Amit Panicker
+              </h1>
+            </motion.div>
+
+            {/* Typewriter text */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="h-16 flex items-center justify-center lg:justify-start"
+            >
+              <div className="relative">
+                <span className="text-2xl sm:text-3xl typewriter bg-gradient-to-r from-primary to-blue-500 bg-clip-text text-transparent font-semibold" data-testid="typewriter-text">
+                  {typewriterText}
+                </span>
+                <div className="absolute -inset-2 bg-gradient-to-r from-primary/10 to-blue-500/10 blur-sm rounded-lg opacity-50"></div>
+              </div>
+            </motion.div>
+
+            {/* Description */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className="text-lg text-muted-foreground leading-relaxed max-w-lg"
+            >
+              Full-stack MERN developer and data analyst with a passion for creating{" "}
+              <span className="text-primary font-medium">innovative web applications</span> and deriving{" "}
+              <span className="text-blue-500 font-medium">actionable insights</span> from
+              complex datasets.
+            </motion.p>
+
+            {/* Stats */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+              className="grid grid-cols-3 gap-6 py-6"
+            >
+              <div className="text-center lg:text-left">
+                <div className="text-2xl font-bold text-primary">6+</div>
+                <div className="text-sm text-muted-foreground">Projects</div>
+              </div>
+              <div className="text-center lg:text-left">
+                <div className="text-2xl font-bold text-blue-500">2+</div>
+                <div className="text-sm text-muted-foreground">Years Learning</div>
+              </div>
+              <div className="text-center lg:text-left">
+                <div className="text-2xl font-bold text-green-500">8.5</div>
+                <div className="text-sm text-muted-foreground">CGPA</div>
+              </div>
+            </motion.div>
+
+            {/* Buttons */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 1 }}
+              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+            >
+              <Button
+                onClick={() => scrollToSection("#portfolio")}
+                className="group relative bg-gradient-to-r from-primary to-blue-500 hover:from-primary/90 hover:to-blue-500/90 text-white px-8 py-3 font-medium rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+                data-testid="button-view-work"
+              >
+                <span className="relative z-10">View My Work</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-blue-500/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </Button>
+              
+              <Button
+                variant="outline"
+                className="group relative border-2 border-primary/30 hover:border-primary text-foreground px-8 py-3 font-medium rounded-full transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-background/50 hover:bg-primary/5"
+                data-testid="button-download-cv"
+                onClick={() => {
+                  const link = document.createElement('a');
+                  link.href = '/Amit_Panicker_CV.pdf';
+                  link.download = 'Amit_Panicker_CV.pdf';
+                  link.click();
+                }}
+              >
+                <span className="relative z-10">Download CV</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-blue-500/10 blur-sm rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </Button>
+            </motion.div>
+          </motion.div>
+
+          {/* Right Image */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="relative flex justify-center lg:justify-end"
+          >
+            <div className="relative">
+              {/* Decorative elements behind image */}
+              <div className="absolute -top-4 -left-4 w-72 h-72 bg-gradient-to-r from-primary/20 to-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
+              <div className="absolute -bottom-4 -right-4 w-64 h-64 bg-gradient-to-r from-green-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }}></div>
+              
+              {/* Main image container */}
+              <div className="relative w-80 h-80 lg:w-96 lg:h-96">
+                {/* Animated rings */}
+                <motion.div
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                  className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/30 to-blue-500/30 p-2"
+                >
+                  <div className="w-full h-full rounded-full bg-background/10 backdrop-blur-sm"></div>
+                </motion.div>
+                
+                <motion.div
+                  animate={{ rotate: -360 }}
+                  transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+                  className="absolute inset-4 rounded-full bg-gradient-to-r from-blue-500/40 to-green-500/40 p-2"
+                >
+                  <div className="w-full h-full rounded-full bg-background/10 backdrop-blur-sm"></div>
+                </motion.div>
+
+                {/* Profile image */}
+                <motion.div
+                  animate={{ y: [-10, 10, -10] }}
+                  transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute inset-8 rounded-full bg-gradient-to-r from-primary to-blue-500 p-2 shadow-2xl"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+                    alt="Amit Panicker"
+                    className="w-full h-full rounded-full object-cover shadow-xl"
+                  />
+                </motion.div>
+
+                {/* Glowing orbs */}
+                <motion.div
+                  animate={{ 
+                    scale: [1, 1.2, 1],
+                    opacity: [0.5, 0.8, 0.5]
+                  }}
+                  transition={{ duration: 3, repeat: Infinity }}
+                  className="absolute top-1/4 -left-6 w-4 h-4 bg-primary rounded-full blur-sm"
+                ></motion.div>
+                <motion.div
+                  animate={{ 
+                    scale: [1, 1.3, 1],
+                    opacity: [0.4, 0.7, 0.4]
+                  }}
+                  transition={{ duration: 4, repeat: Infinity, delay: 1 }}
+                  className="absolute bottom-1/4 -right-8 w-6 h-6 bg-blue-500 rounded-full blur-sm"
+                ></motion.div>
+                <motion.div
+                  animate={{ 
+                    scale: [1, 1.1, 1],
+                    opacity: [0.6, 0.9, 0.6]
+                  }}
+                  transition={{ duration: 5, repeat: Infinity, delay: 2 }}
+                  className="absolute top-3/4 left-0 w-3 h-3 bg-green-500 rounded-full blur-sm"
+                ></motion.div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
       </div>
 
       {/* Enhanced scroll indicator */}
