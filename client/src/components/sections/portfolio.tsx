@@ -48,6 +48,28 @@ const projects = [
     techColor: "bg-blue-600/10 text-blue-600",
     linkColor: "text-blue-600 hover:text-blue-600/80",
   },
+  {
+    id: 5,
+    title: "Netcat Clone",
+    description: "Python implementation of the classic Netcat networking utility for creating TCP/UDP connections, port scanning, and data transfer across networks.",
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    technologies: ["Python", "Networking", "TCP/UDP"],
+    category: "cybersecurity",
+    overlayColor: "bg-red-600/80",
+    techColor: "bg-red-600/10 text-red-600",
+    linkColor: "text-red-600 hover:text-red-600/80",
+  },
+  {
+    id: 6,
+    title: "Port Scanner",
+    description: "BASH script for automated network port scanning to identify open ports and running services on target systems for security assessment.",
+    image: "https://images.unsplash.com/photo-1518709268805-4e9042af2ac1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    technologies: ["BASH", "Networking", "Security"],
+    category: "cybersecurity",
+    overlayColor: "bg-orange-600/80",
+    techColor: "bg-orange-600/10 text-orange-600",
+    linkColor: "text-orange-600 hover:text-orange-600/80",
+  },
 ];
 
 function ProjectCard({ project, index, isVisible }: { 
@@ -131,7 +153,7 @@ export default function Portfolio() {
           </p>
         </motion.div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <ProjectCard 
               key={project.id} 
