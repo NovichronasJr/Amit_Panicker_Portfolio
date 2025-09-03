@@ -202,7 +202,7 @@ export default function Skills() {
           className="mt-16"
         >
           <h3 className="text-xl font-semibold text-center mb-8">Technologies & Tools</h3>
-          <div className="grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-8 gap-8 items-center justify-items-center">
+          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 gap-6 items-center justify-items-center">
             {technologies.map((tech, index) => (
               <motion.div
                 key={tech.name}
