@@ -27,7 +27,8 @@ import {
   SiCss3,
   SiPostman,
   SiVercel,
-  SiRedux
+  SiRedux,
+  SiFigma
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
 
@@ -77,6 +78,7 @@ const technologies = [
   { icon: Shield, name: "Metasploit", color: "text-red-600" },
   { icon: Zap, name: "Hydra", color: "text-yellow-600" },
   { icon: Lock, name: "Nessus", color: "text-blue-700" },
+  { icon: SiFigma, name: "Figma", color: "text-purple-500" },
 ];
 
 function SkillBar({ skill, index, isVisible }: { 
