@@ -142,6 +142,23 @@
     transform: translateY(50px);
     transition: all 0.8s ease-out;
   }
+
+  .animate-spin-slow {
+    animation: spin 20s linear infinite;
+  }
+
+  .animate-spin-reverse {
+    animation: spin-reverse 15s linear infinite;
+  }
+
+  @keyframes spin-reverse {
+    from {
+      transform: rotate(360deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
   
   .scroll-reveal.revealed {
     opacity: 1;
