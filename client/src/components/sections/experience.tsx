@@ -8,7 +8,7 @@ const experiences = [
     title: "Data Analyst Intern",
     company: "Academor",
     period: "July 2024 - August 2024",
-    description: "Worked with large datasets and developed a machine learning model to predict outcomes. Also performed data cleaning, feature extraction, and evaluation. Used Tableau to represent graphical insights from data and to plot confusion matrix.",
+    description: "Analyzed extensive datasets and developed predictive machine learning models to forecast business outcomes. Executed comprehensive data preprocessing including data cleaning, feature extraction, and model evaluation. Utilized Tableau for creating advanced data visualizations and statistical analysis, including confusion matrix representations for model performance assessment.",
     icon: TrendingUp,
     iconBg: "bg-green-600",
     iconColor: "text-white",
