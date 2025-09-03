@@ -26,41 +26,41 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center relative overflow-hidden bg-gradient-to-br from-background via-background/50 to-primary/5"
+      className="min-h-screen flex items-center relative overflow-hidden bg-gradient-to-br from-background via-background/50 to-primary/5 dark:from-background dark:via-background/80 dark:to-primary/10"
     >
       {/* Animated background elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }}></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-primary/5 to-blue-500/5 rounded-full blur-3xl animate-spin-slow"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 dark:bg-primary/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-blue-500/10 dark:bg-blue-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-primary/5 to-blue-500/5 dark:from-primary/15 dark:to-blue-500/15 rounded-full blur-3xl animate-spin-slow"></div>
       </div>
 
       {/* Floating icons */}
       <motion.div
         animate={{ y: [-10, 10, -10] }}
         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-1/4 left-8 text-primary/20 hidden lg:block"
+        className="absolute top-1/4 left-8 text-primary/20 dark:text-primary/40 hidden lg:block"
       >
         <Code size={40} />
       </motion.div>
       <motion.div
         animate={{ y: [-10, 10, -10] }}
         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-        className="absolute top-1/3 right-8 text-blue-500/20 hidden lg:block"
+        className="absolute top-1/3 right-8 text-blue-500/20 dark:text-blue-500/40 hidden lg:block"
       >
         <Database size={35} />
       </motion.div>
       <motion.div
         animate={{ y: [-10, 10, -10] }}
         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-        className="absolute bottom-1/3 left-8 text-green-500/20 hidden lg:block"
+        className="absolute bottom-1/3 left-8 text-green-500/20 dark:text-green-500/40 hidden lg:block"
       >
         <Brain size={32} />
       </motion.div>
       <motion.div
         animate={{ y: [-10, 10, -10] }}
         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-        className="absolute top-16 right-1/3 text-purple-500/20 hidden lg:block"
+        className="absolute top-16 right-1/3 text-purple-500/20 dark:text-purple-500/40 hidden lg:block"
       >
         <Sparkles size={28} />
       </motion.div>
@@ -83,7 +83,7 @@ export default function Hero() {
               className="space-y-2"
             >
               <p className="text-lg text-primary font-medium">Hello, I'm</p>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-foreground via-primary to-blue-500 bg-clip-text text-transparent">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-foreground via-primary to-blue-500 dark:from-white dark:via-primary dark:to-blue-400 bg-clip-text text-transparent">
                 Amit Panicker
               </h1>
             </motion.div>
@@ -96,10 +96,10 @@ export default function Hero() {
               className="h-16 flex items-center justify-center lg:justify-start"
             >
               <div className="relative">
-                <span className="text-2xl sm:text-3xl typewriter bg-gradient-to-r from-primary to-blue-500 bg-clip-text text-transparent font-semibold" data-testid="typewriter-text">
+                <span className="text-2xl sm:text-3xl typewriter bg-gradient-to-r from-primary to-blue-500 dark:from-primary dark:to-blue-400 bg-clip-text text-transparent font-semibold" data-testid="typewriter-text">
                   {typewriterText}
                 </span>
-                <div className="absolute -inset-2 bg-gradient-to-r from-primary/10 to-blue-500/10 blur-sm rounded-lg opacity-50"></div>
+                <div className="absolute -inset-2 bg-gradient-to-r from-primary/10 to-blue-500/10 dark:from-primary/20 dark:to-blue-500/20 blur-sm rounded-lg opacity-50"></div>
               </div>
             </motion.div>
 
@@ -124,15 +124,15 @@ export default function Hero() {
               className="grid grid-cols-3 gap-6 py-6"
             >
               <div className="text-center lg:text-left">
-                <div className="text-2xl font-bold text-primary">6+</div>
+                <div className="text-2xl font-bold text-primary dark:text-primary">6+</div>
                 <div className="text-sm text-muted-foreground">Projects</div>
               </div>
               <div className="text-center lg:text-left">
-                <div className="text-2xl font-bold text-blue-500">2+</div>
+                <div className="text-2xl font-bold text-blue-500 dark:text-blue-400">2+</div>
                 <div className="text-sm text-muted-foreground">Years Learning</div>
               </div>
               <div className="text-center lg:text-left">
-                <div className="text-2xl font-bold text-green-500">8.5</div>
+                <div className="text-2xl font-bold text-green-500 dark:text-green-400">8.5</div>
                 <div className="text-sm text-muted-foreground">CGPA</div>
               </div>
             </motion.div>
@@ -146,7 +146,7 @@ export default function Hero() {
             >
               <Button
                 onClick={() => scrollToSection("#portfolio")}
-                className="group relative bg-gradient-to-r from-primary to-blue-500 hover:from-primary/90 hover:to-blue-500/90 text-white px-8 py-3 font-medium rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+                className="group relative bg-gradient-to-r from-primary to-blue-500 hover:from-primary/90 hover:to-blue-500/90 dark:from-primary dark:to-blue-400 dark:hover:from-primary/90 dark:hover:to-blue-400/90 text-white px-8 py-3 font-medium rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
                 data-testid="button-view-work"
               >
                 <span className="relative z-10">View My Work</span>
@@ -155,7 +155,7 @@ export default function Hero() {
               
               <Button
                 variant="outline"
-                className="group relative border-2 border-primary/30 hover:border-primary text-foreground px-8 py-3 font-medium rounded-full transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-background/50 hover:bg-primary/5"
+                className="group relative border-2 border-primary/30 hover:border-primary dark:border-primary/50 dark:hover:border-primary text-foreground px-8 py-3 font-medium rounded-full transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-background/50 hover:bg-primary/5 dark:bg-background/30 dark:hover:bg-primary/10"
                 data-testid="button-download-cv"
                 onClick={() => {
                   const link = document.createElement('a');
@@ -179,8 +179,8 @@ export default function Hero() {
           >
             <div className="relative">
               {/* Decorative elements behind image */}
-              <div className="absolute -top-4 -left-4 w-72 h-72 bg-gradient-to-r from-primary/20 to-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
-              <div className="absolute -bottom-4 -right-4 w-64 h-64 bg-gradient-to-r from-green-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }}></div>
+              <div className="absolute -top-4 -left-4 w-72 h-72 bg-gradient-to-r from-primary/20 to-blue-500/20 dark:from-primary/30 dark:to-blue-400/30 rounded-full blur-3xl animate-pulse"></div>
+              <div className="absolute -bottom-4 -right-4 w-64 h-64 bg-gradient-to-r from-green-500/20 to-purple-500/20 dark:from-green-400/30 dark:to-purple-400/30 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }}></div>
               
               {/* Main image container */}
               <div className="relative w-80 h-80 lg:w-96 lg:h-96">
@@ -188,24 +188,24 @@ export default function Hero() {
                 <motion.div
                   animate={{ rotate: 360 }}
                   transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                  className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/30 to-blue-500/30 p-2"
+                  className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/30 to-blue-500/30 dark:from-primary/40 dark:to-blue-400/40 p-2"
                 >
-                  <div className="w-full h-full rounded-full bg-background/10 backdrop-blur-sm"></div>
+                  <div className="w-full h-full rounded-full bg-background/10 dark:bg-background/20 backdrop-blur-sm"></div>
                 </motion.div>
                 
                 <motion.div
                   animate={{ rotate: -360 }}
                   transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-                  className="absolute inset-4 rounded-full bg-gradient-to-r from-blue-500/40 to-green-500/40 p-2"
+                  className="absolute inset-4 rounded-full bg-gradient-to-r from-blue-500/40 to-green-500/40 dark:from-blue-400/50 dark:to-green-400/50 p-2"
                 >
-                  <div className="w-full h-full rounded-full bg-background/10 backdrop-blur-sm"></div>
+                  <div className="w-full h-full rounded-full bg-background/10 dark:bg-background/20 backdrop-blur-sm"></div>
                 </motion.div>
 
                 {/* Profile image */}
                 <motion.div
                   animate={{ y: [-10, 10, -10] }}
                   transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute inset-8 rounded-full bg-gradient-to-r from-primary to-blue-500 p-2 shadow-2xl"
+                  className="absolute inset-8 rounded-full bg-gradient-to-r from-primary to-blue-500 dark:from-primary dark:to-blue-400 p-2 shadow-2xl dark:shadow-primary/20"
                 >
                   <img
                     src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
@@ -221,7 +221,7 @@ export default function Hero() {
                     opacity: [0.5, 0.8, 0.5]
                   }}
                   transition={{ duration: 3, repeat: Infinity }}
-                  className="absolute top-1/4 -left-6 w-4 h-4 bg-primary rounded-full blur-sm"
+                  className="absolute top-1/4 -left-6 w-4 h-4 bg-primary dark:bg-primary rounded-full blur-sm"
                 ></motion.div>
                 <motion.div
                   animate={{ 
@@ -229,7 +229,7 @@ export default function Hero() {
                     opacity: [0.4, 0.7, 0.4]
                   }}
                   transition={{ duration: 4, repeat: Infinity, delay: 1 }}
-                  className="absolute bottom-1/4 -right-8 w-6 h-6 bg-blue-500 rounded-full blur-sm"
+                  className="absolute bottom-1/4 -right-8 w-6 h-6 bg-blue-500 dark:bg-blue-400 rounded-full blur-sm"
                 ></motion.div>
                 <motion.div
                   animate={{ 
@@ -237,7 +237,7 @@ export default function Hero() {
                     opacity: [0.6, 0.9, 0.6]
                   }}
                   transition={{ duration: 5, repeat: Infinity, delay: 2 }}
-                  className="absolute top-3/4 left-0 w-3 h-3 bg-green-500 rounded-full blur-sm"
+                  className="absolute top-3/4 left-0 w-3 h-3 bg-green-500 dark:bg-green-400 rounded-full blur-sm"
                 ></motion.div>
               </div>
             </div>
