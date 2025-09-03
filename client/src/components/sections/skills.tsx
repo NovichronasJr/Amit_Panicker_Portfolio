@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Code, BarChart3 } from "lucide-react";
+import { Code, BarChart3, Shield, Lock, Search, Zap } from "lucide-react";
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 import { 
   SiReact, 
@@ -73,6 +73,10 @@ const technologies = [
   { icon: SiPostman, name: "Postman", color: "text-orange-500" },
   { icon: SiVercel, name: "Vercel", color: "text-gray-900" },
   { icon: SiRedux, name: "Redux", color: "text-purple-600" },
+  { icon: Search, name: "Nmap", color: "text-red-500" },
+  { icon: Shield, name: "Metasploit", color: "text-red-600" },
+  { icon: Zap, name: "Hydra", color: "text-yellow-600" },
+  { icon: Lock, name: "Nessus", color: "text-blue-700" },
 ];
 
 function SkillBar({ skill, index, isVisible }: { 
