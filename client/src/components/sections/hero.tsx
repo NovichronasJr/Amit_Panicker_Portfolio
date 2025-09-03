@@ -103,6 +103,12 @@ export default function Hero() {
             variant="outline"
             className="border-border hover:bg-accent text-foreground px-8 py-3 font-medium transition-all duration-300"
             data-testid="button-download-cv"
+            onClick={() => {
+              const link = document.createElement('a');
+              link.href = '/Amit_Panicker_CV.pdf'; // Update this path to your CV file
+              link.download = 'Amit_Panicker_CV.pdf';
+              link.click();
+            }}
           >
             Download CV
           </Button>
