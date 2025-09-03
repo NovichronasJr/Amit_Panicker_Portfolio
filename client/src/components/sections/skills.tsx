@@ -26,7 +26,8 @@ import {
   SiHtml5,
   SiCss3,
   SiPostman,
-  SiVercel
+  SiVercel,
+  SiRedux
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
 
@@ -71,6 +72,7 @@ const technologies = [
   { icon: SiLangchain, name: "LangChain", color: "text-purple-600" },
   { icon: SiPostman, name: "Postman", color: "text-orange-500" },
   { icon: SiVercel, name: "Vercel", color: "text-gray-900" },
+  { icon: SiRedux, name: "Redux", color: "text-purple-600" },
 ];
 
 function SkillBar({ skill, index, isVisible }: { 
