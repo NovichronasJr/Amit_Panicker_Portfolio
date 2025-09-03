@@ -23,42 +23,6 @@ export default function Hero() {
     }
   };
 
-  // Animation variants
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        delayChildren: 0.3,
-        staggerChildren: 0.2
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { y: 50, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        type: "spring",
-        damping: 12,
-        stiffness: 100
-      }
-    }
-  };
-
-  const floatingIconVariants = {
-    animate: {
-      y: [-10, 10, -10],
-      transition: {
-        duration: 4,
-        repeat: Infinity,
-        ease: "easeInOut"
-      }
-    }
-  };
-
   return (
     <section
       id="home"
@@ -67,52 +31,46 @@ export default function Hero() {
       {/* Animated background elements */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }}></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-primary/5 to-blue-500/5 rounded-full blur-3xl animate-spin-slow"></div>
       </div>
 
       {/* Floating icons */}
       <motion.div
-        variants={floatingIconVariants}
-        animate="animate"
-        className="absolute top-1/4 left-10 text-primary/20"
+        animate={{ y: [-10, 10, -10] }}
+        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute top-1/4 left-10 text-primary/20 hidden md:block"
       >
         <Code size={40} />
       </motion.div>
       <motion.div
-        variants={floatingIconVariants}
-        animate="animate"
-        className="absolute top-1/3 right-16 text-blue-500/20"
-        style={{ animationDelay: "1s" }}
+        animate={{ y: [-10, 10, -10] }}
+        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+        className="absolute top-1/3 right-16 text-blue-500/20 hidden md:block"
       >
         <Database size={35} />
       </motion.div>
       <motion.div
-        variants={floatingIconVariants}
-        animate="animate"
-        className="absolute bottom-1/3 left-16 text-green-500/20"
-        style={{ animationDelay: "2s" }}
+        animate={{ y: [-10, 10, -10] }}
+        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+        className="absolute bottom-1/3 left-16 text-green-500/20 hidden md:block"
       >
         <Brain size={32} />
       </motion.div>
       <motion.div
-        variants={floatingIconVariants}
-        animate="animate"
-        className="absolute top-16 right-1/4 text-purple-500/20"
-        style={{ animationDelay: "0.5s" }}
+        animate={{ y: [-10, 10, -10] }}
+        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+        className="absolute top-16 right-1/4 text-purple-500/20 hidden md:block"
       >
         <Sparkles size={28} />
       </motion.div>
 
-      <motion.div
-        className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10"
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-      >
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         {/* Profile Image with enhanced styling */}
         <motion.div
-          variants={itemVariants}
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
           className="relative mb-8"
         >
           <div className="relative w-40 h-40 mx-auto">
@@ -136,7 +94,9 @@ export default function Hero() {
 
         {/* Name with modern typography */}
         <motion.h1
-          variants={itemVariants}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
           className="text-5xl sm:text-7xl font-bold mb-6 bg-gradient-to-r from-foreground via-primary to-blue-500 bg-clip-text text-transparent"
         >
           Hi, I'm{" "}
@@ -147,7 +107,9 @@ export default function Hero() {
 
         {/* Typewriter text with enhanced styling */}
         <motion.div
-          variants={itemVariants}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
           className="text-2xl sm:text-3xl mb-8 h-20 flex items-center justify-center"
         >
           <div className="relative">
@@ -160,7 +122,9 @@ export default function Hero() {
 
         {/* Description with modern styling */}
         <motion.p
-          variants={itemVariants}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
           className="text-xl text-muted-foreground mb-10 max-w-3xl mx-auto leading-relaxed"
         >
           Full-stack MERN developer and data analyst with a passion for creating{" "}
@@ -171,7 +135,9 @@ export default function Hero() {
 
         {/* Enhanced buttons */}
         <motion.div
-          variants={itemVariants}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
           className="flex flex-col sm:flex-row gap-6 justify-center items-center"
         >
           <Button
@@ -198,7 +164,7 @@ export default function Hero() {
             <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-blue-500/10 blur-sm rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </Button>
         </motion.div>
-      </motion.div>
+      </div>
 
       {/* Enhanced scroll indicator */}
       <motion.div
