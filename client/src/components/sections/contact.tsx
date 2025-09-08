@@ -40,9 +40,9 @@ const contactInfo = [
 ];
 
 const socialLinks = [
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Github, href: "#", label: "GitHub" },
-  { icon: Twitter, href: "#", label: "Twitter" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/amit-panicker-a78474272/", label: "LinkedIn" },
+  { icon: Github, href: "https://github.com/NovichronasJr", label: "GitHub" },
+  { icon: Twitter, href: "https://x.com/WAREETHAHAR", label: "Twitter" },
 ];
 
 export default function Contact() {
@@ -139,6 +139,7 @@ export default function Contact() {
                   <motion.a
                     key={social.label}
                     href={social.href}
+                    target="_blank"
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={isIntersecting ? { opacity: 1, scale: 1 } : {}}
                     transition={{ duration: 0.4, delay: 1 + index * 0.1 }}

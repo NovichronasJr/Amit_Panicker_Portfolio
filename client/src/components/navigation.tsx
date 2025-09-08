@@ -25,10 +25,15 @@ export default function Navigation() {
     <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md z-50 border-b border-border">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <div className="text-xl font-bold text-gradient" data-testid="logo">
-            Amit Panicker
+          <div
+            className="text-2xl font-bold font-mono tracking-tight bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500 bg-clip-text text-transparent relative select-none"
+            data-testid="logo"
+          >
+            <span className="text-blue-400">{"<"}</span>
+            Amit<span className="text-purple-400">_Panicker</span>
+            <span className="text-blue-400">{"/>"}</span>
           </div>
-          
+
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
               {navItems.map((item) => (
@@ -43,7 +48,7 @@ export default function Navigation() {
               ))}
             </div>
           </div>
-          
+
           <div className="md:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -59,7 +64,7 @@ export default function Navigation() {
           </div>
         </div>
       </div>
-      
+
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <motion.div

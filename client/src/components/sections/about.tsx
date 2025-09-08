@@ -60,21 +60,21 @@ export default function About() {
             
             <div className="flex space-x-4">
               <a 
-                href="#" 
+                href="https://www.linkedin.com/in/amit-panicker-a78474272/" 
                 className="text-primary hover:text-primary/80 transition-colors duration-300"
                 data-testid="link-linkedin"
               >
                 <Linkedin className="h-6 w-6" />
               </a>
               <a 
-                href="#" 
+                href="https://github.com/NovichronasJr" 
                 className="text-primary hover:text-primary/80 transition-colors duration-300"
                 data-testid="link-github"
               >
                 <Github className="h-6 w-6" />
               </a>
               <a 
-                href="#" 
+                href="https://x.com/WAREETHAHAR" 
                 className="text-primary hover:text-primary/80 transition-colors duration-300"
                 data-testid="link-twitter"
               >

@@ -14,6 +14,8 @@ const projects = [
     overlayColor: "bg-primary/80",
     techColor: "bg-primary/10 text-primary",
     linkColor: "text-primary hover:text-primary/80",
+    github_code:"https://github.com/NovichronasJr/blogapp-oronium",
+    Live_demo : "https://blogapp-oronium.vercel.app",
   },
   {
     id: 2,
@@ -25,6 +27,8 @@ const projects = [
     overlayColor: "bg-green-600/80",
     techColor: "bg-green-600/10 text-green-600",
     linkColor: "text-green-600 hover:text-green-600/80",
+    github_code:"https://github.com/NovichronasJr/",
+    Live_demo : "https://github.com/NovichronasJr/",
   },
   {
     id: 3,
@@ -36,6 +40,8 @@ const projects = [
     overlayColor: "bg-purple-600/80",
     techColor: "bg-purple-600/10 text-purple-600",
     linkColor: "text-purple-600 hover:text-purple-600/80",
+    github_code:"https://github.com/NovichronasJr/Feedbee_students_portal",
+    Live_demo : "https://feedbee-students-portal.vercel.app",
   },
   {
     id: 4,
@@ -47,6 +53,8 @@ const projects = [
     overlayColor: "bg-blue-600/80",
     techColor: "bg-blue-600/10 text-blue-600",
     linkColor: "text-blue-600 hover:text-blue-600/80",
+    github_code:"https://github.com/NovichronasJr/",
+    Live_demo : "https://github.com/NovichronasJr/",
   },
   {
     id: 5,
@@ -58,6 +66,8 @@ const projects = [
     overlayColor: "bg-red-600/80",
     techColor: "bg-red-600/10 text-red-600",
     linkColor: "text-red-600 hover:text-red-600/80",
+    github_code:"https://github.com/NovichronasJr/Netcat-Clone",
+    Live_demo : "https://github.com/NovichronasJr/Netcat-Clone",
   },
   {
     id: 6,
@@ -69,6 +79,8 @@ const projects = [
     overlayColor: "bg-orange-600/80",
     techColor: "bg-orange-600/10 text-orange-600",
     linkColor: "text-orange-600 hover:text-orange-600/80",
+    github_code:"https://github.com/NovichronasJr/port_scanner",
+    Live_demo : "https://github.com/NovichronasJr/port_scanner",
   },
 ];
 
@@ -93,7 +105,7 @@ function ProjectCard({ project, index, isVisible }: {
         />
         <div className={`absolute inset-0 ${project.overlayColor} opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center`}>
           <div className="text-center text-white">
-            <ExternalLink className="h-8 w-8 mb-2 mx-auto" />
+            <a href={project.github_code}><ExternalLink className="h-8 w-8 mb-2 mx-auto" /></a>
             <p className="font-semibold">View Project</p>
           </div>
         </div>
@@ -115,14 +127,14 @@ function ProjectCard({ project, index, isVisible }: {
         </div>
         <div className="flex space-x-4">
           <a 
-            href="#" 
+            href={project.github_code} 
             className={`${project.linkColor} transition-colors duration-300`}
             data-testid={`link-code-${project.id}`}
           >
             <Github className="inline h-4 w-4 mr-1" /> Code
           </a>
           <a 
-            href="#" 
+            href={project.Live_demo} 
             className={`${project.linkColor} transition-colors duration-300`}
             data-testid={`link-demo-${project.id}`}
           >
